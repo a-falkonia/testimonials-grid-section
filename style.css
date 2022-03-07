@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+}
+
+.testimonial {
+  padding: 20px;
+}
+.profile-picture {
+  border-radius: 50%;
+}
