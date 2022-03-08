@@ -1,7 +1,24 @@
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --blue-grayish: hsl(217, 19%, 35%);
+  --blue-blackish: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --gray-light: hsl(0, 0%, 81%);
+  --blue-light: hsl(210, 46%, 95%);
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 body,
@@ -14,17 +31,105 @@ p {
   padding: 0;
 }
 
-body {
-  min-height: 100vh;
-  padding: 20px;
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
-.container {
+body {
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  line-height: 1.5;
+  background: var(--blue-light);
 }
 
 .testimonial {
-  padding: 20px;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
 }
+.testimonial_content {
+  padding: 2rem 1.75rem;
+}
+.testimonial_author {
+  display: flex;
+}
+
+.testimonial_author div {
+  padding: 0.25rem;
+}
+
 .profile-picture {
+  width: 2rem;
+  aspect-ratio: 1;
   border-radius: 50%;
+  border-radius: 50%;
+}
+
+.testimonial_name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.testimonial_position {
+  opacity: 0.5;
+}
+
+.testimonial_highlight {
+  padding: 1rem 0rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+.testimonial_quote {
+  opacity: 0.7;
+  font-weight: lighter;
+  letter-spacing: 0.4px;
+}
+
+.testimonial--violet {
+  background-color: var(--violet);
+  color: var(--white);
+}
+
+.testimonial--blue-grayish {
+  background: var(--blue-grayish);
+  color: var(--white);
+}
+
+.testimonial--blue-blackish {
+  background: var(--blue-blackish);
+  color: var(--white);
+}
+
+.testimonial--white {
+  background: var(--white);
+}
+
+/* mobile first */
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial_author {
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  .testimonial_position {
+    font-size: 0.6875rem;
+  }
+
+  .testimonial:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
 }
